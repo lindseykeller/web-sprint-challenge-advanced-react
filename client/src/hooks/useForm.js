@@ -1,9 +1,9 @@
 // write your custom hook here to control your checkout form
-import { useLocalStorage } from "./useLocalStorage";
+import { useState } from "react";
 
 
-const useForm = (initialValues, cb) => {
-  const [values, setValues] = useState('');
+const useForm = () => {
+  const [cart, setCart] = useState('');
 
 //   const handleChanges = (e) => {
 //     console.log(e.target.name, e.target.value);
@@ -23,7 +23,7 @@ const useForm = (initialValues, cb) => {
 //     setCart(cart.filter((p) => p.id !== plant.id));
 //   };
 
-  return [values, setValues];
+  return [cart, setCart];
 };
 
 export default useForm;
