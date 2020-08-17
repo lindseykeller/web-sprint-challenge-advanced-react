@@ -12,32 +12,23 @@ const initialValue = {
   };
 
 const useForm = () => {
-  const [cart, setCart] = useState([]);
+  // const [value, setValue] = useState([]);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [values, setValues] = useState(initialValue);
 
 
-
-  //add a plant to the cart
-  const addToCart = (plant) => {
-    setCart([...cart, plant]);
-  };
-
-//   // remove a plant from the cart
-  const removeFromCart = (plant) => {
-    setCart(cart.filter((p) => p.id !== plant.id));
-  };
-
   const handleChanges = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
+    console.log("handle changes")
   };
 
   const handleSubmit = (e) => {
+    console.log("submit")
     e.preventDefault();
     setShowSuccessMessage(true);
   };
 
-  return [cart, setCart];
+  return [ values, showSuccessMessage, handleChanges, handleSubmit];
 };
 
 export default useForm;

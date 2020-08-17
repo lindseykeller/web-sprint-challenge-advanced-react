@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
   constructor() {
@@ -21,7 +22,7 @@ export default class PlantList extends Component {
       .then((res) => {
         console.log(res);
         this.setState({ plants: res.data.plantsData });
-        console.log(this.state);
+        console.log(this.state.plants);
       })
       .catch((err) => console.log(err));
   }
