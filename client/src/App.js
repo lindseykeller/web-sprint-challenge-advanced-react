@@ -1,3 +1,4 @@
+  
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
@@ -20,6 +21,7 @@ function App() {
   const removeFromCart = (plant) => {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
+
 
   return (
     <div>

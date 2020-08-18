@@ -30,15 +30,32 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+To build stateful class components, the state gets initialized in the constructor changes depending on the actions or events in the component.
+
 2. Describe the different phases of the component lifecycle.
+
+   1. Mounting Phase:
+       In this phase data is initialized on the constructor, and render is invoked and componentDidMount is called. 
+       
+   2. Updating Phase
+       In the Growth/Updating phase the component state is updated with setState. Render is invoked and componentDidUpdate is called.
+
+   3.  Un-mounting Phase
+       The component is removed from the screen, componentWillUnmount is called.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+       Class component lifecycle methods which are used to know when the component "will" and "did" load, update, and render. For example:
+       componentShouldUpdate() - called when a components prop or state changes or getDerivedStateFromProps() that will set the state object based on the initial value in atrribute.
+
+
 4. Define stateful logic.
+   Logic that sets a components state, for example, a function that handles a click event or toggle.
 
 5. Describe how to test a React component with React Testing Library.
-
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
+  Arrange: Set up code that can be tested
+  Act: Call methods and functions that returns the result the test is expecting
+  Assert: Determine if the expected return matches the actual return
 
 ## Instructions
 
