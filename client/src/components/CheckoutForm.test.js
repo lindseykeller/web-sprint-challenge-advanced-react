@@ -1,9 +1,15 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import CheckoutForm from "./components/CheckoutForm";
+import CheckoutForm from "../components/CheckoutForm";
 
 // Write up the two tests here and make sure they are testing what the title shows
 
-test("form header renders", () => {});
+test("form header renders", () => {
+    const wrapper = render(<CheckoutForm />);
+    const element = wrapper.queryByText(/Checkout Form/i)
+    expect(element).toBeInTheDocument();
+});
 
-test("form shows success message on submit with form details", () => {});
+test("form shows success message on submit with form details", () => {
+
+});
