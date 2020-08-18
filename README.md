@@ -50,7 +50,7 @@ To build stateful class components, the state gets initialized in the constructo
 
 
 4. Define stateful logic.
-   Logic that sets a components state, for eaxample, a function that handles a click event or toggle.
+   Logic that sets a components state, for example, a function that handles a click event or toggle.
 
 5. Describe how to test a React component with React Testing Library.
   Arrange: Set up code that can be tested
